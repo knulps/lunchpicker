@@ -16,6 +16,8 @@ import java.util.Random;
 
 
 public class MyActivity extends Activity {
+    private static final String TAG = "MyActivity";
+    
     TextView ResultView;
     Button btn_generate;
     String[] PersonSet = {"A", "B", "C", "D", "E", "F"};
@@ -43,7 +45,7 @@ public class MyActivity extends Activity {
                             && !(result2.contains(PersonSet[0]) && result2.contains(PersonSet[1]) && result2.contains(PersonSet[2]))) {
                         break;
                     } else {
-                        Log.e("@@@@@","damn!! boygroup generated... do it again");
+                        Log.e(TAG,"damn!! boygroup generated... do it again");
                     }
                 }
                 ResultView.setText(result1+"\n\n"+result2);
@@ -74,7 +76,7 @@ public class MyActivity extends Activity {
     }
 
     public void RandomGenerate() {
-        Log.e("@@@@@","Random Generating...");
+        Log.e(TAG,"Random Generating...");
         list = new ArrayList<String>(6);
 
         for(int i = 0; i<6; i++) {
